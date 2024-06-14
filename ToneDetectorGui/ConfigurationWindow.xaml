@@ -1,0 +1,29 @@
+﻿<Window x:Class="ToneDetectorGui.ConfigurationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Configuration" Height="857" Width="450" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Tones List" FontWeight="Bold" Margin="0,0,0,10" />
+            <ListBox Name="ListBoxTones" Height="200" Margin="0,0,0,20"/>
+            <Button Content="Delete Selected" Width="150" Click="DeleteTone_Click" Margin="0,0,0,20"/>
+            <TextBlock Text="Alias" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBox Name="TextBoxAlias" Width="300" Margin="0,0,0,10"/>
+            <TextBlock Text="A Tone (Hz)" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBox Name="TextBoxToneA" Width="100" Margin="0,0,0,10"/>
+            <TextBlock Text="B Tone (Hz)" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBox Name="TextBoxToneB" Width="100" Margin="0,0,0,10"/>
+            <Button Content="Add Tone Pair" Width="150" Click="AddTone_Click" Margin="0,20,0,0"/>
+            <TextBlock Text="Threshold (Hz)" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBox Name="TextBoxThreshold" Width="100"/>
+            <TextBlock Text="Audio Device" FontWeight="Bold" Margin="0,0,0,10"/>
+            <ComboBox Name="ComboBoxAudioDevices" Width="300" Margin="0,0,0,10"/>
+            <CheckBox Name="CheckBoxEnableUdp" Content="Enable UDP Server" Margin="0,0,0,10"/>
+            <TextBlock Text="UDP Server Address" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBox Name="TextBoxUdpAddress" Width="300" Margin="0,0,0,10"/>
+            <TextBlock Text="UDP Server Port" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBox Name="TextBoxUdpPort" Width="100"/>
+            <Button Content="Save" Click="SaveButton_Click" Width="100" HorizontalAlignment="Right" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="ToneDetectorGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ToneDetector" Height="272" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Configuration" Click="MenuItem_Configuration_Click"/>
+                    <MenuItem Header="Exit" Click="MenuItem_Exit_Click"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel Margin="20" VerticalAlignment="Center">
+                <TextBlock Text="Detected Frequency A:" FontWeight="Bold" />
+                <TextBox Name="TextBoxFrequencyA" IsReadOnly="True" Margin="0,0,0,20" />
+                <TextBlock Text="Detected Frequency B:" FontWeight="Bold" />
+                <TextBox Name="TextBoxFrequencyB" IsReadOnly="True" Margin="0,0,0,20" />
+                <Button Name="StartButton" Content="Start Detection" Click="StartButton_Click" Width="150" Margin="0,0,0,10" />
+                <Button Name="StopButton" Content="Stop Detection" Click="StopButton_Click" Width="150" />
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
